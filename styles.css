@@ -1,0 +1,161 @@
+.main-header {
+    background: #e1e1e1 url('img/background-header.png') center/cover no-repeat;
+    color: #fff;
+    padding: 10rem 1rem 6rem 1rem;
+    text-align: center;
+    transition: padding 0.3s, font-size 0.3s;
+}
+
+@media (min-width: 900px) {
+    .main-header {
+        background-color: #e1e1e1;
+        background-image: url('img/background-header-pc.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        /* ajusta la imagen al máximo tamaño posible sin recortarla */
+        background-size: contain;
+        padding: 14rem 1rem 8rem 1rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        z-index: 100;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+        overflow: hidden;
+    }
+    body {
+        padding-top: 22rem;
+    }
+    .main-header.shrink {
+        padding: 24rem 1rem 8rem 1rem;
+    }
+}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f7f7;
+    color: #222;
+}
+
+.main-header.shrink {
+    padding: 1.5rem 1rem 0.7rem 1rem;
+}
+.main-header h1 {
+    margin: 0;
+    font-size: 2rem;
+    transition: font-size 0.3s;
+}
+.main-header.shrink h1 {
+    font-size: 1.3rem;
+}
+.main-header p {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    transition: font-size 0.3s;
+}
+.main-header.shrink p {
+    font-size: 0.95rem;
+}
+
+main {
+    padding: 1rem;
+}
+section {
+    margin-bottom: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 1rem;
+}
+.whatsapp-btn {
+    position: fixed;
+    right: 1.2rem;
+    bottom: 4.2rem;
+    background: #25d366;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    width: 66px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: box-shadow 0.2s;
+}
+.whatsapp-btn:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+.whatsapp-btn img {
+    width: 42px;
+    height: 42px;
+}
+@media (min-width: 600px) {
+    main {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    width: 100%;
+    max-width: 100vw;
+}
+.client-card {
+    min-width: 220px;
+    background: #eafaf7;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(45,143,133,0.08);
+    padding: 1rem;
+    text-align: center;
+    flex: 0 0 auto;
+}
+.carousel-btn {
+    background: #2d8f85;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    margin: 0 0.5rem;
+    transition: background 0.2s;
+}
+.carousel-btn:hover {
+    background: #25d366;
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.95rem;
+    margin-top: 0;
+}

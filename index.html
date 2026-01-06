@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C&A Administración Integral de Consorcios</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="main-header">
+        
+    </header>
+    <script>
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('.main-header');
+        if (window.scrollY > 40) {
+            header.classList.add('shrink');
+        } else {
+            header.classList.remove('shrink');
+        }
+    });
+    </script>
+    <main>
+         <section>
+            <h1>Administración Integral de Consorcios</h1>
+          <p>Bienvenido a la página oficial del consorcio. Aquí encontrarás información relevante y formas de contacto.</p>
+        </section>
+        <section>
+            <h2>Sobre Nosotros</h2>
+            <p>Gestionamos y administramos edificios con transparencia y eficiencia. Nuestro objetivo es brindar
+                tranquilidad y soluciones a los propietarios.</p>
+        </section>
+        <section>
+            <h2>Contacto</h2>
+            <p>¿Tienes dudas o necesitas ayuda? Contáctanos por WhatsApp.</p>
+        </section>
+        <section>
+            <h2>Clientes</h2>
+            <div class="carousel">
+                <button class="carousel-btn prev" aria-label="Anterior">&#8249;</button>
+                <div class="carousel-track">
+                    <div class="client-card">
+                        <h3>Edificio Central</h3>
+                        <p>Av. Principal 1234</p>
+                    </div>
+                    <div class="client-card">
+                        <h3>Residencias Norte</h3>
+                        <p>Calle Norte 567</p>
+                    </div>
+                    <div class="client-card">
+                        <h3>Torre Sur</h3>
+                        <p>Av. Sur 890</p>
+                    </div>
+                </div>
+                <button class="carousel-btn next" aria-label="Siguiente">&#8250;</button>
+            </div>
+        </section>
+    </main>
+    <a href="https://wa.me/5491154249902" class="whatsapp-btn" target="_blank" aria-label="Chat en WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    </a>
+    <footer>
+        <p>&copy; 2026 Consorcio de Edificios. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="carousel.js"></script>
+</body>
+
+</html>
