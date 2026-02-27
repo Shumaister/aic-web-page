@@ -69,16 +69,78 @@ body {
 .main-header.shrink {
     padding: 1.5rem 1rem 0.7rem 1rem;
 }
-
-/* Header image */
-.header-image {
+ 
+/* ===== HEADER BANNER ===== */
+.main-header {
     width: 100%;
-    height: auto;
+    height: 180px; /* altura mobile */
+    background-image: url("img/background-header-mobile.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+    .main-header {
+        height: 420px; /* proporcional a 1920x600 */
+        background-image: url("img/background-header-pc.png");
+        background-position: left center; 
+        /* left center ayuda a no cortar el edificio */
+    }
+}
+
+/* Mobile: keep natural image height and gap before nav */
+@media (max-width: 899px) {
+    .main-header {
+        height: auto;
+        min-height: 120px; /* ensure header area is visible even if image momentarily fails */
+    }
+    .header-image {
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+/* Ensure picture element and image are always rendered as block-level elements */
+.main-header picture,
+.main-header img {
     display: block;
+    width: 100%;
 }
 
 main {
     padding: 1rem;
+}
+/* Global box-sizing to avoid width math issues */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Prevent horizontal overflow caused by conflicting widths */
+body {
+    overflow-x: hidden;
+}
+/* Container that wraps main sections: mobile-first and desktop behaviors */
+.body-container {
+    width: 95%;         /* mobile: nearly full width */
+    max-width: 1400px;  /* don't grow indefinitely */
+    margin: 0 auto;     /* center */
+    box-sizing: border-box;
+}
+
+/* Desktop: use 80% of viewport width and keep sections stacked vertically */
+@media (min-width: 900px) {
+    .body-container {
+        width: 80vw;
+        max-width: none;
+    }
+}
+
+/* Ensure sections inside the container take full container width */
+.body-container > section {
+    width: 100%;
+    box-sizing: border-box;
 }
 section {
     margin-bottom: 2rem;
@@ -109,55 +171,81 @@ section {
     width: 42px;
     height: 42px;
 }
-@media (min-width: 600px) {
-    main {
-        max-width: 600px;
-        margin: 0 auto;
-    }
-}
 
+ /* CARROUSEL */
 .carousel {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0;
+    width: 100%;
+    margin: 2rem 0;
+    overflow: hidden;
 }
+
 .carousel-track {
     display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 1rem;
-    padding: 0.5rem 0;
+    transition: transform 0.4s ease-in-out;
     width: 100%;
-    max-width: 100vw;
 }
+
 .client-card {
-    min-width: 220px;
+    flex: 0 0 100%; /* 🔥 ocupa todo el ancho */
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 2rem;
     background: #eafaf7;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(45,143,133,0.08);
-    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     text-align: center;
-    flex: 0 0 auto;
 }
 .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     background: #2d8f85;
-    color: #fff;
+    color: white;
     border: none;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    font-size: 1.5rem;
     cursor: pointer;
-    position: relative;
     z-index: 2;
-    margin: 0 0.5rem;
-    transition: background 0.2s;
 }
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
 .carousel-btn:hover {
     background: #25d366;
 }
+
+/* Indicadores */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 1rem;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators button.active {
+    background: #2d8f85;
+    transform: scale(1.2);
+}
+
+
 
 html, body {
     height: 100%;
@@ -179,3 +267,4 @@ footer {
     font-size: 0.95rem;
     margin-top: 0;
 }
+

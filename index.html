@@ -10,12 +10,8 @@
 </head>
 
 <body>
-    <header class="main-header">
-        <picture>
-            <source media="(min-width:900px)" srcset="img/background-header-pc.png">
-            <img src="img/background-header.png" alt="Encabezado" class="header-image">
-        </picture>
-    </header>
+    <header class="main-header"></header>
+
     <nav class="main-nav" aria-label="Menú principal">
         <ul>
             <li><a href="#saludo">Saludo</a></li>
@@ -24,44 +20,49 @@
             <li><a href="#clientes">Clientes</a></li>
         </ul>
     </nav>
-    
+
     <main>
-        <section id="saludo">
-            <h1>Administración Integral de Consorcios</h1>
-            <p>Bienvenido a la página oficial del consorcio. Aquí encontrarás información relevante y formas de contacto.</p>
-        </section>
-        <section id="sobre-nosotros">
-            <h2>Sobre Nosotros</h2>
-            <p>Gestionamos y administramos edificios con transparencia y eficiencia. Nuestro objetivo es brindar
-                tranquilidad y soluciones a los propietarios.</p>
-        </section>
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>¿Tienes dudas o necesitas ayuda? Contáctanos por WhatsApp.</p>
-        </section>
-        <section id="clientes">
-            <h2>Clientes</h2>
-            <div class="carousel">
-                <button class="carousel-btn prev" aria-label="Anterior">&#8249;</button>
-                <div class="carousel-track">
-                    <div class="client-card">
-                        <h3>Edificio Central</h3>
-                        <p>Av. Principal 1234</p>
+        <div class="body-container">
+            <section id="saludo">
+                <h1>Administración Integral de Consorcios</h1>
+                <p>Bienvenido a la página oficial del consorcio. Aquí encontrarás información relevante y formas de
+                    contacto.</p>
+            </section>
+            <section id="sobre-nosotros">
+                <h2>Sobre Nosotros</h2>
+                <p>Gestionamos y administramos edificios con transparencia y eficiencia. Nuestro objetivo es brindar
+                    tranquilidad y soluciones a los propietarios.</p>
+            </section>
+            <section id="contacto">
+                <h2>Contacto</h2>
+                <p>¿Tienes dudas o necesitas ayuda? Contáctanos por WhatsApp.</p>
+            </section>
+            <section id="clientes">
+                <h2>Clientes</h2>
+                <div class="carousel">
+                    <button class="carousel-btn prev" aria-label="Anterior">&#8249;</button>
+                    <div class="carousel-track">
+                        <div class="client-card">
+                            <h3>Edificio Central</h3>
+                            <p>Av. Principal 1234</p>
+                        </div>
+                        <div class="client-card">
+                            <h3>Residencias Norte</h3>
+                            <p>Calle Norte 567</p>
+                        </div>
+                        <div class="client-card">
+                            <h3>Torre Sur</h3>
+                            <p>Av. Sur 890</p>
+                        </div>
                     </div>
-                    <div class="client-card">
-                        <h3>Residencias Norte</h3>
-                        <p>Calle Norte 567</p>
-                    </div>
-                    <div class="client-card">
-                        <h3>Torre Sur</h3>
-                        <p>Av. Sur 890</p>
-                    </div>
+                    <button class="carousel-btn next" aria-label="Siguiente">&#8250;</button>
+                    <div class="carousel-indicators"></div>
                 </div>
-                <button class="carousel-btn next" aria-label="Siguiente">&#8250;</button>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
-    <a href="https://wa.me/5491154249902" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat en WhatsApp">
+    <a href="https://wa.me/5491154249902" class="whatsapp-btn" target="_blank" rel="noopener noreferrer"
+        aria-label="Chat en WhatsApp">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
     </a>
     <footer>
