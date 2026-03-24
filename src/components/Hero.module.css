@@ -1,0 +1,16 @@
+.hero {
+  width: 100%;
+  height: 180px;
+  background-image: url('/img/background-header-mobile.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.heroInner { text-align: center; background: rgba(0,0,0,0.35); padding: 12px; border-radius: 6px; }
+
+@media (min-width: 900px) {
+  .hero { height: 420px; background-image: url('/img/background-header-pc.png'); background-position: left center; }
+}

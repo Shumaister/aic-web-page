@@ -1,0 +1,10 @@
+.mainNav {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  z-index: 50;
+}
+.mainNav ul { display:flex; gap:12px; list-style:none; margin:0; padding:0; }
+.mainNav a { text-decoration:none; color:#111; }
